@@ -1,1 +1,2 @@
-# Gavrila_Alexandru_ActivitateJava2025_NEW
+# Java 2025 New
+Gavrila Alexandru-Valentin
