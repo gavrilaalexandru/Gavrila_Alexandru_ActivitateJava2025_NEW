@@ -2,6 +2,8 @@ package csie.ase.ro.seminar5.classes;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 public class Car implements Comparable<Car> {
     private String color;
     private String manufacturer;
@@ -65,20 +67,33 @@ public class Car implements Comparable<Car> {
         }
     }
 
+//    @Override
+//    public int hashCode() {
+//        return manufacturer.hashCode();
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj instanceof Car) { // sau instanceof Car c direct
+//            Car c = (Car)obj;
+//            return manufacturer.equals(c.manufacturer);
+//        }
+//        else {
+//            return false;
+//        }
+//    }
+
+
     @Override
-    public int hashCode() {
-        return manufacturer.hashCode();
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return Objects.equals(manufacturer, car.manufacturer);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Car) { // sau instanceof Car c direct
-            Car c = (Car)obj;
-            return manufacturer.equals(c.manufacturer);
-        }
-        else {
-            return false;
-        }
+    public int hashCode() {
+        return Objects.hashCode(manufacturer);
     }
 }
 
