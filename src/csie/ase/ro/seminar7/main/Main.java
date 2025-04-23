@@ -86,7 +86,7 @@ public class Main {
 
         BufferedReader bufferedReader = null;
         try {
-            FileInputStream fileInputStream = new FileInputStream("student.txt");
+            FileInputStream fileInputStream = new FileInputStream("setStudenti.txt");
             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
             bufferedReader = new BufferedReader(inputStreamReader);
 
